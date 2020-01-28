@@ -38,6 +38,8 @@ class UserController extends Controller
             File::makeDirectory($this->path);
         }
 
+        $fileName = '';
+
         //IF PHOTO IS NOT EMPTY
         if(!empty($request->photo)){
             //TAKE FILE IMAGE FROM FORM INPUT
