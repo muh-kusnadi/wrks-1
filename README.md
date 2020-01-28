@@ -11,3 +11,21 @@ Sebelum menjalankan aplikasi, terlebih dahulu lakukan konfigurasi di bawah ini :
 - ketik perintah **npm install**
 - ketik perintah **npm run dev**
 - Terakhir jalankan aplikasi dengan perintah **php artisan serve**
+
+## Struktur Database
+
+Aplikasi ini akan menggunakan 2 table utama, yakni users dan students. Pada studi kasus ini kita juga mencoba untuk merelasikan antar table tersebut. Berikut informasi lengkap kedua table tersebut :
+
+- Table users
+
+| COLUMN | TYPE DATA|
+| ------ | ------ |
+| **id**| bigint(20) |
+| **name**| varchar(255) |
+| **email**| varchar(255) |
+| **email_verified_at**| timestamp |
+| **password**| varchar(255) |
+| **photo**| varchar(255) |
+| **remember_token**| varchar(100) |
+| **created_at**| timestamp |
+| **updated_at**| timestamp |
