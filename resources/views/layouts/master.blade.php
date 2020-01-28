@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">Dashboard</a></li>
-            <li><a href="#">Data Mahasiswa</a></li>
+            <li><a href="#">Data Siswa</a></li>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -105,17 +105,7 @@
   <div class="content-wrapper">
     <div class="container">
       <!-- Content Header (Page header) -->
-      <section class="content-header">
-        <h1>
-          Top Navigation
-          <small>Example 2.0</small>
-        </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="#">Layout</a></li>
-          <li class="active">Top Navigation</li>
-        </ol>
-      </section>
+      @yield('breadcrumbs')
 
       <!-- Main content -->
       <section class="content">
