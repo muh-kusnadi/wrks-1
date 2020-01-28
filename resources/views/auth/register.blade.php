@@ -4,7 +4,7 @@
 <div class="login-box">
 
     <div class="login-logo">
-        <a href="../../index2.html"><b>Workshop</b> Web Dev</a>
+        <a href="{{URL::to('/')}}"><b>Workshop</b> Web Dev</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
