@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Auth;
+use Carbon\Carbon;
 
 class User extends Authenticatable
 {
@@ -36,4 +38,29 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function updateUserData($data, $fileName)
+    {
+        $name           = $data->name;
+        $email          = $data->email;
+        if(empty($data->password)){
+            $password       = Auth::user()->password;
+        } else {
+            $password       = bcrypt($data->password);
+        }
+        if(empty($data->photo)){
+            $photo          = Auth::user()->photo;
+        } else {
+            $photo          = $fileName;
+        }
+
+        return $this->where('id', Auth::user()->id)
+                        ->update([
+                            'name'          => $name,
+                            'email'         => $email,
+                            'password'      => $password,
+                            'photo'         => $photo,
+                            'updated_at'    => Carbon::now()
+                        ]);
+    }
 }

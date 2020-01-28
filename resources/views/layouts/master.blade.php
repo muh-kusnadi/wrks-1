@@ -46,7 +46,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Dashboard</a></li>
+            <li class="active"><a href="{{route('home')}}">Dashboard</a></li>
             <li><a href="#">Data Siswa</a></li>
           </ul>
         </div>
@@ -59,9 +59,13 @@
               <!-- Menu Toggle Button -->
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <!-- The user image in the navbar-->
-                <img src="{{URL::to('assets/img/avatar5.png')}}" class="user-image" alt="User Image">
+                @if (empty(Auth::user()->photo))
+                    <img src="{{URL::to('assets/img/avatar5.png')}}" class="user-image" alt="User Image">
+                @else
+                    <img src="{{URL::to('storage/users')}}/{{ Auth::user()->photo }}" class="user-image" alt="User Image">
+                @endif
                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                <span class="hidden-xs">Alexander Pierce</span>
+                <span class="hidden-xs">{{Auth::user()->name}}</span>
               </a>
               <ul class="dropdown-menu">
                 <!-- The user image in the menu -->
@@ -69,13 +73,13 @@
                 @if (empty(Auth::user()->photo))
                     <img src="{{URL::to('assets/img/avatar5.png')}}" class="img-circle" alt="User Image">
                 @else
-                    <label for="">images from db</label>
+                    <img src="{{URL::to('storage/users')}}/{{ Auth::user()->photo }}" class="img-circle" alt="User Image">
                 @endif
 
 
                   <p>
-                    Alexander Pierce - Web Developer
-                    <small>Member since Nov. 2012</small>
+                    {{Auth::user()->name}}
+                    <small>Member since {{Auth::user()->created_at->format('M, Y')}}</small>
                   </p>
                 </li>
                 <!-- Menu Footer-->
@@ -109,7 +113,9 @@
 
       <!-- Main content -->
       <section class="content">
-        @yield('content')
+            <div class="row">
+                @yield('content')
+            </div>
       </section>
       <!-- /.content -->
     </div>
