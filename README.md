@@ -1,4 +1,6 @@
-## Web Development "Live Coding Workshop Series" - UMPAR
+# Web Development "Live Coding Workshop Series" - UMPAR
+
+## Konfigurasi
 
 Sebelum menjalankan aplikasi, terlebih dahulu lakukan konfigurasi di bawah ini :
 
@@ -18,14 +20,29 @@ Aplikasi ini akan menggunakan 2 table utama, yakni users dan students. Pada stud
 
 - Table users
 
-| COLUMN | TYPE DATA|
-| ------ | ------ |
+| COLUMN | TYPE DATA | etc |
+| ------ | ------ | ------ |
 | **id**| bigint(20) |
 | **name**| varchar(255) |
 | **email**| varchar(255) |
-| **email_verified_at**| timestamp |
+| **email_verified_at**| timestamp | nullable |
 | **password**| varchar(255) |
-| **photo**| varchar(255) |
-| **remember_token**| varchar(100) |
-| **created_at**| timestamp |
-| **updated_at**| timestamp |
+| **photo**| varchar(255) | nullable |
+| **remember_token**| varchar(100) | nullable |
+| **created_at**| timestamp | nullable |
+| **updated_at**| timestamp | nullable |
+
+- Table students
+| COLUMN | TYPE DATA | etc |
+| ------ | ------ | ------ |
+| **id**| bigint(20) |
+| **name**| varchar(255) |
+| **phone_number**| varchar(255) |
+| **address**| varchar(255) |
+| **gender**| enum('male','female') |
+| **religion**| enum('male','female') |
+| **created_at**| timestamp | nullable |
+| **updated_at**| timestamp | nullable |
+| **user_id**| bigint(20) |
+
+
