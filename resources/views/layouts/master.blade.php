@@ -15,9 +15,17 @@
   <link rel="stylesheet" href="{{URL::to('bower_components/Ionicons/css/ionicons.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{URL::to('assets/css/AdminLTE.min.css')}}">
+  <!-- SweetAlert 2 -->
+  <link rel="stylesheet" href="{{URL::to('assets/css/sweetalert2.min.css')}}">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="{{URL::to('assets/css/skins/_all-skins.min.css')}}">
+
+  <style>
+    .swal2-popup {
+        font-size: 1.6rem !important;
+    }
+  </style>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -145,7 +153,11 @@
 <script src="{{URL::to('bower_components/fastclick/lib/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{URL::to('assets/js/adminlte.min.js')}}"></script>
+<!-- SweetAlert2 -->
+<script src="{{URL::to('assets/js/sweetalert2.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{URL::to('assets/js/demo.js')}}"></script>
+
+@stack('scripts')
 </body>
 </html>
