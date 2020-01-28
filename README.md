@@ -41,7 +41,7 @@ Aplikasi ini akan menggunakan 2 table utama, yakni users dan students. Pada stud
 | **phone_number**| varchar(255) |
 | **address**| varchar(255) |
 | **gender**| enum('male','female') |
-| **religion**| enum('male','female') |
+| **religion**| varchar(255) |
 | **created_at**| timestamp | nullable |
 | **updated_at**| timestamp | nullable |
 | **user_id**| bigint(20) |
