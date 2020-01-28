@@ -33,6 +33,7 @@ Aplikasi ini akan menggunakan 2 table utama, yakni users dan students. Pada stud
 | **updated_at**| timestamp | nullable |
 
 - Table students
+
 | COLUMN | TYPE DATA | etc |
 | ------ | ------ | ------ |
 | **id**| bigint(20) |
