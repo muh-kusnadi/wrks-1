@@ -9,7 +9,7 @@ Sebelum menjalankan aplikasi, terlebih dahulu lakukan konfigurasi di bawah ini :
 - Setelah **.env** file sudah tercopy, selanjutkan lakukan konfigurasi pertama yaitu mengisi bagian **APP_KEY** dengan perintah **php artisan key:generate**.
 - Buat database di phpmyadmin, kemudian masukkan nama database tersebut di file **.env** pada bagian **DB_DATABASE**
 - ketik perintah **php artisan migrate** untuk membuat table ke database menggunakan fitur migrate database laravel.
-- ketik perintah **php artisan db:seed** untuk melakukan seeding table table (dimana pada kasus ini, kita akan melakukan seeding pada table users dan table students agar). Teman-teman bisa cek di folder **../database/seeds**.
+- ketik perintah **php artisan db:seed** untuk melakukan seeding table table (dimana pada kasus ini, kita akan melakukan seeding pada table users dan table students). Teman-teman bisa cek di folder **../database/seeds**.
 - ketik perintah **php artisan storage:link** untuk meng-set directory storage menjadi public
 - ketik perintah **npm install**
 - ketik perintah **npm run dev**
