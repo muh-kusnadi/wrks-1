@@ -44,6 +44,6 @@ Aplikasi ini akan menggunakan 2 table utama, yakni users dan students. Pada stud
 | **religion**| varchar(255) |
 | **created_at**| timestamp | nullable |
 | **updated_at**| timestamp | nullable |
-| **user_id**| bigint(20) |
+| **user_id**| bigint(20) | fk |
 
 
