@@ -12,13 +12,29 @@
 @endsection
 
 @section('content')
-<div class="box box-default">
-    <div class="box-header with-border">
-      <h3 class="box-title">Blank Box</h3>
+<div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-aqua"><i class="fa fa-users"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Data User</span>
+        <span class="info-box-number">{{$users}}</span>
+      </div>
+      <!-- /.info-box-content -->
     </div>
-    <div class="box-body">
-      The great content goes here
+    <!-- /.info-box -->
+</div>
+
+<div class="col-md-6 col-sm-12 col-xs-12">
+    <div class="info-box">
+      <span class="info-box-icon bg-green"><i class="fa fa-graduation-cap"></i></span>
+
+      <div class="info-box-content">
+        <span class="info-box-text">Data Siswa</span>
+        <span class="info-box-number">{{$students}}</span>
+      </div>
+      <!-- /.info-box-content -->
     </div>
-    <!-- /.box-body -->
+    <!-- /.info-box -->
 </div>
 @endsection

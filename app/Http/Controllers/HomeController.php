@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Student;
 
 class HomeController extends Controller
 {
@@ -11,9 +13,11 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user, Student $student)
     {
         $this->middleware('auth');
+        $this->user     = $user;
+        $this->student  = $student;
     }
 
     /**
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users      = $this->user->count();
+
+        $students   = $this->student->count();
+
+        return view('home', compact('users', 'students'));
     }
 }

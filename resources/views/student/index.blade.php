@@ -6,7 +6,7 @@
       Students
     </h1>
     <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-users"></i> Students</a></li>
+      <li><a href="{{route('students.index')}}"><i class="fa fa-users"></i> Students</a></li>
     </ol>
 </section>
 @endsection
